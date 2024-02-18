@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptos</title>
+    <link rel="stylesheet" href="stylecry.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="dow"><!-- TradingView Widget BEGIN -->
+                    <span id="logo">
+                        <img src="cryptologo.png" alt="logo" style="width: 6vw;">
+                    </span>
+                    <div class="tradingview-widget-container" id="ticker1">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                                {
+                                    "symbol": "CRYPTOCAP:BTC.D",
+                                        "width": "100%",
+                                            "isTransparent": true,
+                                                "colorTheme": "dark",
+                                                    "locale": "en"
+                                }
+                            </script>
+
+                    </div>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+
+                        <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                                {
+                                    "symbol": "BINANCE:BNBUSD",
+                                        "width": "100%",
+                                            "isTransparent": true,
+                                                "colorTheme": "dark",
+                                                    "locale": "en"
+                                }
+                            </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <ul class="navbar-nav nav-pills ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crypto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Stocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">xo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <hr style="border: 1px solid white;">
+    <div class="ticker">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                    {
+                        "symbols": [
+                            {
+                                "proName": "BITSTAMP:ETHUSD",
+                                "title": "Ethereum"
+                            },
+                            {
+                                "description": "Bitcoin",
+                                "proName": "BITSTAMP:BTCUSD"
+                            },
+                            {
+                                "description": "Solana",
+                                "proName": "COINBASE:SOLUSD"
+                            },
+                            {
+                                "description": "Polygon",
+                                "proName": "COINBASE:MATICUSD"
+                            }
+                        ],
+                            "showSymbolLogo": true,
+                                "isTransparent": false,
+                                    "displayMode": "adaptive",
+                                        "colorTheme": "dark",
+                                            "locale": "en"
+                    }
+                </script>
+        </div>
+
+        <!-- TradingView Widget END -->
+
+    </div>
+    <div class="chart">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                        "autosize": true,
+                            "symbol": "BITSTAMP:BTCUSD",
+                                "interval": "1",
+                                    "timezone": "Etc/UTC",
+                                        "theme": "dark",
+                                            "style": "1",
+                                                "locale": "en",
+                                                    "enable_publishing": false,
+                                                        "hide_side_toolbar": false,
+                                                            "allow_symbol_change": true,
+                                                                "calendar": false,
+                                                                    "show_popup_button": true,
+                                                                        "popup_width": "1000",
+                                                                            "popup_height": "650",
+                                                                                "support_host": "https://www.tradingview.com"
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+    <br>
+    <div class="overview">
+        <h2>Overview</h2>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+                async>
+                    {
+                        "width": "100%",
+                            "height": "100%",
+                                "defaultColumn": "overview",
+                                    "screener_type": "crypto_mkt",
+                                        "displayCurrency": "BTC",
+                                            "colorTheme": "dark",
+                                                "locale": "en"
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+
+
+    <div class="Tsides">
+        <div class="news">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                        {
+                            "feedMode": "symbol",
+                                "symbol": "BITSTAMP:BTCUSD",
+                                    "isTransparent": true,
+                                        "displayMode": "regular",
+                                            "width": "100%",
+                                                "height": "100%",
+                                                    "colorTheme": "dark",
+                                                        "locale": "en"
+                        }
+                    </script>
+            </div>
+        </div>
+        <!-- TradingView Widget END -->
+        <div class="syminfo">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                        {
+                            "symbol": "BITSTAMP:BTCUSD",
+                                "width": "100%",
+                                    "locale": "en",
+                                        "colorTheme": "dark",
+                                            "isTransparent": true
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="leftbottom">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget">Comapny profile</div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js" async>
+                            {
+                                "width": "100%",
+                                    "height": "100%",
+                                        "isTransparent": true,
+                                            "colorTheme": "dark",
+                                                "symbol": "BITSTAMP:BTCUSD",
+                                                    "locale": "en"
+                            }
+                        </script>
+                </div>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+    </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <h2>Technical overview & Market_cap </h2>
+    <div class="technicles">
+        <div class="meter"><!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                        {
+                            "interval": "1D",
+                                "width": "100%",
+                                    "isTransparent": true,
+                                        "height": "100%",
+                                            "symbol": "BITSTAMP:BTCUSD",
+                                                "showIntervalTabs": true,
+                                                    "displayMode": "single",
+                                                        "locale": "en",
+                                                            "colorTheme": "dark"
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <div class="heatmap">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+                        {
+                            "dataSource": "Crypto",
+                                "blockSize": "market_cap_calc",
+                                    "blockColor": "change",
+                                        "locale": "en",
+                                            "symbolUrl": "",
+                                                "colorTheme": "dark",
+                                                    "hasTopBar": false,
+                                                        "isDataSetEnabled": false,
+                                                            "isZoomEnabled": true,
+                                                                "hasSymbolTooltip": true,
+                                                                    "width": "100%",
+                                                                        "height": "100%"
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+    </div>
+    <div class="mt-5 pt-5 pb-5 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xs-12 about-company">
+                    <h2>Crypto_Annalyzing</h2>
+                    <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+                        ante mollis quam tristique convallis </p>
+                    <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i
+                                class="fa fa-linkedin-square"></i></a></p>
+                </div>
+                <div class="col-lg-3 col-xs-12 links">
+                    <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                    <ul class="m-0 p-0">
+                        <li>- <a href="index.html">stocks</a></li>
+                        <li>- <a href="#">Nam mauris velit</a></li>
+                        <li>- <a href="#">Etiam vitae mauris</a></li>
+                        <li>- <a href="#">Fusce scelerisque</a></li>
+                        <li>- <a href="#">Sed faucibus</a></li>
+                        <li>- <a href="#">Mauris efficitur nulla</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-xs-12 location">
+                    <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+                    <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+                    <p class="mb-0"><i class="fa fa-phone mr-3"></i>(91) 7622015740</p>
+                    <p><i class="fa fa-envelope-o mr-3"></i>info@My_Annalyser.com</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col copyright">
+                    <p class=""><small class="text-white-50">© 2024. All Rights Reserved.</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

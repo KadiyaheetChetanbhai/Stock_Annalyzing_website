@@ -45,26 +45,83 @@
     right: 2vw
 }
 
+.seto {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .l1 {
-    position: relative;
-    left: 2vw;
-    margin: 2vw;
-    padding: auto;
-    border: 1px solid white;
+    height: 4vh;
+    background: #131722;
     color: white;
-    height: 5vh;
-    width: 10vw;
 }
 
 .bt {
+    height: 4vh;
+    width: 9vw;
     color: white;
-    border: 1px solid white;
-    margin-left: 2vw;
-    height: 5vh;
-    width: 7vw;
+    background: rgb(48, 55, 55);
 }
 
 
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label {
+    margin: 0 10px;
+    color: turquoise;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
 
 .chart {
     padding: 0.5vw;
@@ -87,6 +144,7 @@
 
     background: rgb(0, 0, 0);
     height: 50vh;
+    margin-bottom: 4vh;
 }
 
 .stockdata {
@@ -115,4 +173,61 @@
     margin-left: 1.5vw;
     padding-top: 3vh;
     height: 50vh;
+}
+
+.footer {
+    background: #000;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    z-index: 4;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
 }
